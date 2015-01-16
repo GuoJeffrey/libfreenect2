@@ -1,3 +1,9 @@
+libfreenect2 (0.1-185) unstable; urgency=low
+
+  * First working version with build system port
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 16 Jan 2015 16:24:00 +0100
+
 libfreenect2 (0.1-184) unstable; urgency=low
 
   * Initial commit of ReMake build system port

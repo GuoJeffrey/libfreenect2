@@ -693,7 +693,7 @@ void CpuDepthPacketProcessor::loadXTableFromFile(const char* filename)
   const unsigned char *data;
   size_t length;
 
-  if(loadResource("xTable.bin", &data, &length))
+  if(loadResource("bin/xTable.bin", &data, &length))
   {
     std::copy(data, data + length, impl_->x_table.data);
   }
@@ -710,7 +710,7 @@ void CpuDepthPacketProcessor::loadZTableFromFile(const char* filename)
   const unsigned char *data;
   size_t length;
 
-  if(loadResource("zTable.bin", &data, &length))
+  if(loadResource("bin/zTable.bin", &data, &length))
   {
     std::copy(data, data + length, impl_->z_table.data);
   }
@@ -725,7 +725,7 @@ void CpuDepthPacketProcessor::load11To16LutFromFile(const char* filename)
   const unsigned char *data;
   size_t length;
 
-  if(loadResource("11to16.bin", &data, &length))
+  if(loadResource("bin/11to16.bin", &data, &length))
   {
     std::copy(data, data + length, reinterpret_cast<unsigned char*>(impl_->lut11to16));
   }
