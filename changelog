@@ -1,0 +1,1230 @@
+libfreenect2 (0.1-184) unstable; urgency=low
+
+  * Initial commit of ReMake build system port
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 16 Jan 2015 11:02:00 +0100
+
+libfreenect2 (0.1-183) unstable; urgency=low
+
+  * fix for wrong define name.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Mon, 12 Jan 2015 15:53:57 +0100
+
+libfreenect2 (0.1-182) unstable; urgency=low
+
+  * renamed global variable shutdown to protonect_shutdown; fixes #120
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 12 Jan 2015 13:49:06 +0100
+
+libfreenect2 (0.1-181) unstable; urgency=low
+
+  * Merge pull request #103 from christiankerl/generate_macro_header
+  * generate header file with platform and build configuration macros
+
+ -- Christian Kerl <christian-kerl@web.de>  Mon, 12 Jan 2015 13:44:47 +0100
+
+libfreenect2 (0.1-180) unstable; urgency=low
+
+  * Merge pull request #124 from wiedemeyer/ocl_device_selection
+  * added posibility to select openCL device for depth processing and improved
+    openCL device listing
+
+ -- Christian Kerl <christian-kerl@web.de>  Mon, 12 Jan 2015 13:44:26 +0100
+
+libfreenect2 (0.1-179) unstable; urgency=low
+
+  * Merge pull request #119 from larshg/openclFix
+  * OpenCL fixes
+
+ -- Christian Kerl <christian-kerl@web.de>  Mon, 12 Jan 2015 13:44:07 +0100
+
+libfreenect2 (0.1-178) unstable; urgency=low
+
+  * added posibility to select openCL device for depth processing.
+  * if not specified priority is GPU, CPU, others.
+  * listing of multiple devices work now correctly.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Tue, 06 Jan 2015 15:52:47 +0100
+
+libfreenect2 (0.1-177) unstable; urgency=low
+
+  * Added another Enviorment variable on windows.
+  * Mine is AMDAPPSDKROOT instead of ATISTREAMSDKROOT.
+  * And cleaned a bit how it was searching.
+
+ -- Lars Glud <larshg@gmail.com>  Fri, 19 Dec 2014 16:52:06 +0100
+
+libfreenect2 (0.1-176) unstable; urgency=low
+
+  * Opencl uses M_PI, which is defined <math.h> with _USE_MATH_DEFINES defined.
+
+ -- Lars Glud <larshg@gmail.com>  Fri, 19 Dec 2014 16:44:38 +0100
+
+libfreenect2 (0.1-175) unstable; urgency=low
+
+  * Fix openDevice idx
+
+ -- Dorian Galvez-Lopez <dorian@email.gwu.edu>  Sun, 14 Dec 2014 04:27:06 +0100
+
+libfreenect2 (0.1-174) unstable; urgency=low
+
+  * updated exports of templated classes to fix visualc++ problems
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 20 Nov 2014 10:36:23 +0100
+
+libfreenect2 (0.1-173) unstable; urgency=low
+
+  * Do not download cl.hpp if it exists
+
+ -- Dorian Galvez-Lopez <dorian@email.gwu.edu>  Wed, 19 Nov 2014 22:00:18 +0100
+
+libfreenect2 (0.1-172) unstable; urgency=low
+
+  * added libfreenect2/config.h defining all platform and build configuration
+    dependend macros; fixes #100, includes #69
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 19 Nov 2014 18:08:26 +0100
+
+libfreenect2 (0.1-171) unstable; urgency=low
+
+  * Merge pull request #99 from floe/ignore_fix
+  * ignore generated resource file
+
+ -- Christian Kerl <christian-kerl@web.de>  Wed, 19 Nov 2014 09:18:49 +0100
+
+libfreenect2 (0.1-170) unstable; urgency=low
+
+  * Merge pull request #98 from christiankerl/refactor_data_received_callback
+  * moved DataReceivedCallback from TransferPool to separate header
+
+ -- Christian Kerl <christian-kerl@web.de>  Wed, 19 Nov 2014 09:18:37 +0100
+
+libfreenect2 (0.1-169) unstable; urgency=low
+
+  * ignore generated resource file
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 18 Nov 2014 14:45:37 +0100
+
+libfreenect2 (0.1-168) unstable; urgency=low
+
+  * moved DataReceivedCallback from TransferPool to separate header to break
+    dependencies
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 18 Nov 2014 09:48:23 +0100
+
+libfreenect2 (0.1-167) unstable; urgency=low
+
+  * added option to hide the debug window of OpenGLDepthPacketProcessor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 17 Nov 2014 11:21:04 +0100
+
+libfreenect2 (0.1-166) unstable; urgency=low
+
+  * added #ifdef guard to hide OpenCLPacketPipeline if we build without
+    OpenCL support; added cmake option to enable OpenCL support
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 17 Nov 2014 10:15:34 +0100
+
+libfreenect2 (0.1-165) unstable; urgency=low
+
+  * added option to cmake to enable c++11
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 02 Nov 2014 12:57:07 +0100
+
+libfreenect2 (0.1-164) unstable; urgency=low
+
+  * fixing merge artifacts
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sat, 15 Nov 2014 16:56:47 +0100
+
+libfreenect2 (0.1-163) unstable; urgency=low
+
+  * added packet pipeline implementations to choose the different built-in
+    DepthPacketProcessors
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sat, 01 Nov 2014 17:25:43 +0100
+
+libfreenect2 (0.1-162) unstable; urgency=low
+
+  * implemented a better device selection. Try to use the first GPU device
+    or if not found try to use first CPU device.
+  * added class and method name to output.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Thu, 09 Oct 2014 11:38:30 +0200
+
+libfreenect2 (0.1-161) unstable; urgency=low
+
+  * changed curl to wget to be consistent
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sat, 04 Oct 2014 20:56:30 +0200
+
+libfreenect2 (0.1-160) unstable; urgency=low
+
+  * fixing compilation if opencl is not available
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 28 Sep 2014 18:33:23 +0200
+
+libfreenect2 (0.1-159) unstable; urgency=low
+
+  * using found opencl library.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Mon, 25 Aug 2014 09:48:10 +0200
+
+libfreenect2 (0.1-158) unstable; urgency=low
+
+  * cleaned up CMakeLists.txt. Removed c++11 dependency.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Fri, 22 Aug 2014 10:07:06 +0200
+
+libfreenect2 (0.1-157) unstable; urgency=low
+
+  * added opencl implementation of the depth processor.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Thu, 21 Aug 2014 16:34:33 +0200
+
+libfreenect2 (0.1-156) unstable; urgency=low
+
+  * fixed opencl source file string
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 29 Sep 2014 08:37:26 +0200
+
+libfreenect2 (0.1-155) unstable; urgency=low
+
+  * fixed bug in loadResource
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 29 Sep 2014 08:36:43 +0200
+
+libfreenect2 (0.1-154) unstable; urgency=low
+
+  * fixing compilation if opencl is not available
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 28 Sep 2014 18:33:23 +0200
+
+libfreenect2 (0.1-153) unstable; urgency=low
+
+  * Allow apple platforms to find the cl.hpp file
+
+ -- MrTatsch <tatsch@gmail.com>  Mon, 15 Sep 2014 11:36:03 +0200
+
+libfreenect2 (0.1-152) unstable; urgency=low
+
+  * Get the missing cl.hpp from Khronos.org
+
+ -- MrTatsch <tatsch@gmail.com>  Mon, 15 Sep 2014 10:52:57 +0200
+
+libfreenect2 (0.1-151) unstable; urgency=low
+
+  * using found opencl library.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Mon, 25 Aug 2014 09:48:10 +0200
+
+libfreenect2 (0.1-150) unstable; urgency=low
+
+  * Parameters are now read in from the Parameters struct.
+  * Config is read from the Config struct.
+  * Removed unused variables from opencl code.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Fri, 22 Aug 2014 11:41:35 +0200
+
+libfreenect2 (0.1-149) unstable; urgency=low
+
+  * cleaned up CMakeLists.txt. Removed c++11 dependency.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Fri, 22 Aug 2014 10:07:06 +0200
+
+libfreenect2 (0.1-148) unstable; urgency=low
+
+  * added opencl implementation of the depth processor.
+
+ -- Thiemo Wiedemeyer <wiedemeyer@informatik.uni-bremen.de>  Thu, 21 Aug 2014 16:34:33 +0200
+
+libfreenect2 (0.1-147) unstable; urgency=low
+
+  * Merge pull request #66 from larshg/libfreenect2packeddata
+  * Made a ifdef for packing data to work on windows also.
+
+ -- Christian Kerl <christian-kerl@web.de>  Sat, 15 Nov 2014 16:34:34 +0100
+
+libfreenect2 (0.1-146) unstable; urgency=low
+
+  * Merge pull request #52 from dorian3d/feature/install
+  * make install enabled
+
+ -- Christian Kerl <christian-kerl@web.de>  Sat, 15 Nov 2014 16:31:52 +0100
+
+libfreenect2 (0.1-145) unstable; urgency=low
+
+  * Path of freenect2Config.cmake fixed
+
+ -- Dorian Galvez-Lopez <dorian@email.gwu.edu>  Sun, 09 Nov 2014 03:41:42 +0100
+
+libfreenect2 (0.1-144) unstable; urgency=low
+
+  * Made a ifdef for packing data to work on windows also.
+
+ -- Lars Glud <larshg@gmail.com>  Mon, 13 Oct 2014 14:39:11 +0200
+
+libfreenect2 (0.1-143) unstable; urgency=low
+
+  * Merge pull request #80 from christiankerl/fix_device_identification
+  * fix device identification
+
+ -- Christian Kerl <christian-kerl@web.de>  Sat, 01 Nov 2014 17:44:32 +0100
+
+libfreenect2 (0.1-142) unstable; urgency=low
+
+  * replaced libusb_get_port_number with libusb_get_device_address to correctly
+    identify devices, fixes #65
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sat, 01 Nov 2014 17:35:29 +0100
+
+libfreenect2 (0.1-141) unstable; urgency=low
+
+  * Merge pull request #67 from larshg/libfreenect2mathfix
+  * Added include <algorithm> in ifdef WIN32 and VS2013
+
+ -- Christian Kerl <christian-kerl@web.de>  Sat, 01 Nov 2014 16:24:11 +0100
+
+libfreenect2 (0.1-140) unstable; urgency=low
+
+  * Formatting README to Markdown format
+
+ -- Dave Coleman <davetcoleman@gmail.com>  Fri, 31 Oct 2014 18:27:06 +0100
+
+libfreenect2 (0.1-139) unstable; urgency=low
+
+  * Added Ubuntu documentation
+
+ -- Dave Coleman <davetcoleman@gmail.com>  Fri, 31 Oct 2014 18:24:36 +0100
+
+libfreenect2 (0.1-138) unstable; urgency=low
+
+  * Added include <algorithm>
+  * Added type in std::min/std::max
+  * Added include <math.h> and _USE_MATH_DEFINES if WIN32
+
+ -- Lars Glud <larshg@gmail.com>  Mon, 13 Oct 2014 14:31:30 +0200
+
+libfreenect2 (0.1-137) unstable; urgency=low
+
+  * Merge pull request #38 from christiankerl/configurable_pipeline
+  * make packet processing pipeline configurable
+
+ -- Christian Kerl <christian-kerl@web.de>  Fri, 03 Oct 2014 13:35:56 +0200
+
+libfreenect2 (0.1-136) unstable; urgency=low
+
+  * SyncMultiFrameListener changes:
+   - implementation using pimpl - fixes #48
+   - added non-blocking method to check if all frames are available - fixes
+     #56
+   - added timed wait function if compiled with c++0x or c++11
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 28 Sep 2014 14:16:06 +0200
+
+libfreenect2 (0.1-135) unstable; urgency=low
+
+  * Definitions and headers for threads added
+
+ -- Dorian Galvez-Lopez <dorian@email.gwu.edu>  Mon, 15 Sep 2014 22:44:29 +0200
+
+libfreenect2 (0.1-134) unstable; urgency=low
+
+  * make install enabled
+  * The shared library, headers and a cmake file can be make installed
+
+ -- Dorian Galvez-Lopez <dorian@email.gwu.edu>  Sat, 13 Sep 2014 10:17:24 +0200
+
+libfreenect2 (0.1-133) unstable; urgency=low
+
+  * Merge pull request #30 from christiankerl/fix_max_iso_packet_size
+  * reimplement custom version of libusb_get_max_iso_packet_size
+
+ -- Florian Echtler <floe@butterbrot.org>  Sun, 17 Aug 2014 21:17:52 +0200
+
+libfreenect2 (0.1-132) unstable; urgency=low
+
+  * Updated readme
+  * Added two extra brew dependencies - install will not work without
+    them
+
+ -- James Billingham <james@jamesbillingham.com>  Tue, 12 Aug 2014 13:59:23 +0200
+
+libfreenect2 (0.1-131) unstable; urgency=low
+
+  * Merge branch 'master' into configurable_pipeline
+  * Conflicts:
+  	examples/protonect/include/libfreenect2/libfreenect2.hpp
+  	examples/protonect/src/libfreenect2.cpp
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 08 Aug 2014 11:40:24 +0200
+
+libfreenect2 (0.1-130) unstable; urgency=low
+
+  * updated README
+
+ -- Christian Kerl <christian-kerl@web.de>  Fri, 08 Aug 2014 11:23:46 +0200
+
+libfreenect2 (0.1-129) unstable; urgency=low
+
+  * Merge pull request #34 from rjw57/reset-workaround
+  * Workaround for libusb_reset_device behaviour
+
+ -- Christian Kerl <christian-kerl@web.de>  Fri, 08 Aug 2014 11:05:30 +0200
+
+libfreenect2 (0.1-128) unstable; urgency=low
+
+  * libfreenect2: coding style fixes (if braces)
+  * Make if0statement braces consistent with the rest of the file. (*Mea
+    culpa*.)
+
+ -- Rich Wareham <rjw57@cantab.net>  Fri, 08 Aug 2014 10:16:40 +0200
+
+libfreenect2 (0.1-127) unstable; urgency=low
+
+  * libfreenect2: reinstate tryGetDevice as an error
+  * If tryGetDevice fails, it *is* unrecoverable as far as initialisation is
+    concerned.
+
+ -- Rich Wareham <rjw57@cantab.net>  Fri, 08 Aug 2014 10:14:42 +0200
+
+libfreenect2 (0.1-126) unstable; urgency=low
+
+  * Merge pull request #32 from MrTatsch/patch-1
+  * libjpeg_turbo fails to configure
+
+ -- Florian Echtler <floe@butterbrot.org>  Fri, 08 Aug 2014 09:33:25 +0200
+
+libfreenect2 (0.1-125) unstable; urgency=low
+
+  * openDevice: if tryGetDevice fails, it is a warning not an error
+  * Change the error message into a warning message and allow open
+    to
+  * continue.
+
+ -- Rich Wareham <rjw57@cam.ac.uk>  Thu, 07 Aug 2014 10:09:15 +0200
+
+libfreenect2 (0.1-124) unstable; urgency=low
+
+  * change sleep() call to libfreenect2::this_thread::sleep_for()
+
+ -- Rich Wareham <rjw57@cam.ac.uk>  Thu, 07 Aug 2014 10:07:41 +0200
+
+libfreenect2 (0.1-123) unstable; urgency=low
+
+  * introduce a small delay after reset before reenumeration
+  * This is a rather nasty hack but is required to give certainty that
+    the
+  * Kinnect has re-appeared on the bus after a reset failed. In the
+    absence
+  * of a better solution this Gets The Job Done(TM).
+
+ -- Rich Wareham <rjw57@cam.ac.uk>  Mon, 04 Aug 2014 11:49:36 +0200
+
+libfreenect2 (0.1-122) unstable; urgency=low
+
+  * handle LIBUSB_ERROR_NOT_FOUND from libusb_reset_device
+  * It is possible (and indeed on my controller certain) that
+  * libusb_reset_device may return LIBUSB_ERROR_NOT_FOUND under certain
+  * circumstances outlined in the libusb documentation. In such cases
+    we
+  * should re-start device enumeration and re-open the device without
+  * attempting reset.
+
+ -- Rich Wareham <rjw57@cam.ac.uk>  Mon, 04 Aug 2014 11:37:24 +0200
+
+libfreenect2 (0.1-121) unstable; urgency=low
+
+  * refactor Freenect2::openDevice to be less nested
+  * Freenect2::openDevice was in danger of becoming a twisty maze of
+    if/else
+  * statements all alike.
+
+ -- Rich Wareham <rjw57@cam.ac.uk>  Mon, 04 Aug 2014 11:27:43 +0200
+
+libfreenect2 (0.1-120) unstable; urgency=low
+
+  * removed early exit from install_deps.sh
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 13:21:42 +0200
+
+libfreenect2 (0.1-119) unstable; urgency=low
+
+  * changed libusbx dependency to libusb
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 13:10:49 +0200
+
+libfreenect2 (0.1-118) unstable; urgency=low
+
+  * Merge branch 'master' into configurable_pipeline
+  * Conflicts:
+  	examples/protonect/src/libfreenect2.cpp
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 12:33:50 +0200
+
+libfreenect2 (0.1-117) unstable; urgency=low
+
+  * reimplemented custom version of get_max_iso_packet_size, which works
+    for usb 3 endpoints; this allows to switch from the forked libusb version
+    of @JoshBlake to the latest official libusb version;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 23 Jul 2014 11:54:49 +0200
+
+libfreenect2 (0.1-116) unstable; urgency=low
+
+  * renamed PacketProcessorFactory to PacketPipeline, moved all ownership
+    handling of packet parser and packet processor objects to PacketPipeline
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 12:00:17 +0200
+
+libfreenect2 (0.1-115) unstable; urgency=low
+
+  * replaced default argument with method overload
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 11:32:58 +0200
+
+libfreenect2 (0.1-114) unstable; urgency=low
+
+  * fixed license header
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 29 Jul 2014 11:27:33 +0200
+
+libfreenect2 (0.1-113) unstable; urgency=low
+
+  * refactoring to make rgb and ir packet stream parsers and packet processors
+    configurable, this will allow to easily swap different implementations and
+    even use different implementations per device
+
+ -- christiankerl <christian.kerl@in.tum.de>  Mon, 28 Jul 2014 18:16:11 +0200
+
+libfreenect2 (0.1-112) unstable; urgency=low
+
+  * add --host x86_64-apple-darwin flag to configure
+  * As pointed out in the build recipe of libjpeg_turbo:
+  * 64-bit Build on 64-bit OS X
+  ---------------------------
+  * Add
+    --host x86_64-apple-darwin NASM=/opt/local/bin/nasm
+  * to the configure command line.  NASM 2.07 or later from MacPorts must
+    be
+  * installed.
+  * linking will fail on 64bit systems without this flag due to:
+  "configure: error: configuration problem: maybe object file format mismatch".
+   I guess there is hardly any macs  out there with USB3 but without 64bit
+   OS. NASM should also be installed, in my case its installed from homebrew
+   and found in the PATH.
+
+ -- MrTatsch <tatsch@gmail.com>  Sun, 27 Jul 2014 20:57:39 +0200
+
+libfreenect2 (0.1-111) unstable; urgency=low
+
+  * Merge branch 'master' into fix_device_enumeration
+  * Conflicts:
+  	examples/protonect/src/libfreenect2.cpp
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 25 Jul 2014 09:50:16 +0200
+
+libfreenect2 (0.1-110) unstable; urgency=low
+
+  * Merge pull request #28 from christiankerl/fix_shader_filter
+  * renamed filter functions in GLSL shader code, fixes #27
+
+ -- Christian Kerl <christian-kerl@web.de>  Fri, 25 Jul 2014 09:43:53 +0200
+
+libfreenect2 (0.1-109) unstable; urgency=low
+
+  * moved usb device reset from enumerateDevices() to openDevice() otherwise
+    there are problems if multiple processes use libfreenect2 to access different
+    Kinects
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 25 Jul 2014 09:29:24 +0200
+
+libfreenect2 (0.1-108) unstable; urgency=low
+
+  * Removing comment that no longer applies
+
+ -- Ryan Gordon <ryan@quizlet.com>  Thu, 24 Jul 2014 11:25:29 +0200
+
+libfreenect2 (0.1-107) unstable; urgency=low
+
+  * Fixing permissions of install files
+
+ -- Ryan Gordon <ryan@quizlet.com>  Thu, 24 Jul 2014 11:24:06 +0200
+
+libfreenect2 (0.1-106) unstable; urgency=low
+
+  * Working on abstracting deps for *nix systems and having separate install
+    scripts for mac versus ubuntu
+
+ -- Ryan Gordon <ryan@quizlet.com>  Thu, 24 Jul 2014 11:13:12 +0200
+
+libfreenect2 (0.1-105) unstable; urgency=low
+
+  * fixed problem during device enumeration, if device is already open
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 23 Jul 2014 10:21:43 +0200
+
+libfreenect2 (0.1-104) unstable; urgency=low
+
+  * fixed SIGINT shutdown problem
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 23 Jul 2014 10:05:56 +0200
+
+libfreenect2 (0.1-103) unstable; urgency=low
+
+  * improved device enumeration to open every device, reset it, and get
+    serial number; implemented methods to get serial number and open device
+    by serial number; fixes #21
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 23 Jul 2014 10:04:27 +0200
+
+libfreenect2 (0.1-102) unstable; urgency=low
+
+  * renamed filter functions in GLSL shader code, fixes #27
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 23 Jul 2014 08:29:55 +0200
+
+libfreenect2 (0.1-101) unstable; urgency=low
+
+  * Fixing URL for OpenKinect repo
+
+ -- Ryan Gordon <ryan@quizlet.com>  Tue, 22 Jul 2014 08:54:26 +0200
+
+libfreenect2 (0.1-100) unstable; urgency=low
+
+  * Slightly better error message
+
+ -- Ryan Gordon <ryan@quizlet.com>  Tue, 22 Jul 2014 08:06:54 +0200
+
+libfreenect2 (0.1-99) unstable; urgency=low
+
+  * Fixes for working on Mac OSX
+
+ -- Ryan Gordon <ryan@quizlet.com>  Sun, 20 Jul 2014 11:36:10 +0200
+
+libfreenect2 (0.1-98) unstable; urgency=low
+
+  * Merge remote-tracking branch 'christiankerl/refactor_protocol' into
+    refactor_protocol_ryan
+  * Conflicts:
+  	examples/protonect/Protonect.cpp
+
+ -- Ryan Gordon <ryan@quizlet.com>  Sun, 20 Jul 2014 10:19:57 +0200
+
+libfreenect2 (0.1-97) unstable; urgency=low
+
+  * Fixing up installation instructions
+
+ -- Ryan Gordon <ryan@quizlet.com>  Sun, 20 Jul 2014 09:53:22 +0200
+
+libfreenect2 (0.1-96) unstable; urgency=low
+
+  * Fixes for compiling and running libfreenect2 on Max OSX
+
+ -- Ryan Gordon <ryan@quizlet.com>  Sun, 20 Jul 2014 09:51:39 +0200
+
+libfreenect2 (0.1-95) unstable; urgency=low
+
+  * changed depth packet processor to opengl version
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 29 Jun 2014 15:21:45 +0200
+
+libfreenect2 (0.1-94) unstable; urgency=low
+
+  * removed obsolete protonect path parameter
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 29 Jun 2014 15:16:28 +0200
+
+libfreenect2 (0.1-93) unstable; urgency=low
+
+  * fixed memory leak in OpenGLDepthPacketProcessor, if listener doesn't
+    take ownership of frame
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Sun, 29 Jun 2014 15:01:52 +0200
+
+libfreenect2 (0.1-92) unstable; urgency=low
+
+  * re-enabled p0table flipping in CpuDepthPacketProcessor and added functionality
+    to OpenGLDepthPacketProcessor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Sun, 29 Jun 2014 15:12:11 +0200
+
+libfreenect2 (0.1-91) unstable; urgency=low
+
+  * adapted OpenGLDepthPacketProcessor to refactorings
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 29 Jun 2014 14:53:25 +0200
+
+libfreenect2 (0.1-90) unstable; urgency=low
+
+  * removed Protonect.h; added cmake build rule for libfreenect2; Protonect
+    is now a single main linking against libfreenect2;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 17:16:14 +0200
+
+libfreenect2 (0.1-89) unstable; urgency=low
+
+  * added methods to access color and ir camera params
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 16:37:20 +0200
+
+libfreenect2 (0.1-88) unstable; urgency=low
+
+  * moved all command response parsing to libfreenct2/protocol/response.h; added
+    more commands observed in usb logs; implemented method to get serial number
+    and firmware version
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 16:26:23 +0200
+
+libfreenect2 (0.1-87) unstable; urgency=low
+
+  * changed time spent waiting for usb transfer cancel; added more commands
+    observed in usb logs, but still don't allow to restart camera
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 13:38:31 +0200
+
+libfreenect2 (0.1-86) unstable; urgency=low
+
+  * finished first version of internal c++ api
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 13:05:23 +0200
+
+libfreenect2 (0.1-85) unstable; urgency=low
+
+  * changed frame listener api
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 10 Jun 2014 13:04:39 +0200
+
+libfreenect2 (0.1-84) unstable; urgency=low
+
+  * started to implement internal c++ api
+
+ -- christiankerl <christian.kerl@in.tum.de>  Mon, 09 Jun 2014 22:57:36 +0200
+
+libfreenect2 (0.1-83) unstable; urgency=low
+
+  * fixed order of transferpool shutdown and device closing
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 12 May 2014 18:21:30 +0200
+
+libfreenect2 (0.1-82) unstable; urgency=low
+
+  * added more command definitions observed in usb logs; updated shutdown
+    sequence
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 11 May 2014 14:19:15 +0200
+
+libfreenect2 (0.1-81) unstable; urgency=low
+
+  * moved CommandTransaction implementation to cpp file
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 11 May 2014 13:40:23 +0200
+
+libfreenect2 (0.1-80) unstable; urgency=low
+
+  * improved error reporting in UsbControl
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 17:36:55 +0200
+
+libfreenect2 (0.1-79) unstable; urgency=low
+
+  * removed old usb control and command code from Protonect.cpp
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 16:40:59 +0200
+
+libfreenect2 (0.1-78) unstable; urgency=low
+
+  * moved set configuration; claim/release interfaces to UsbControl class
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 16:36:36 +0200
+
+libfreenect2 (0.1-77) unstable; urgency=low
+
+  * moved usb control transfers to separate class
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 16:23:13 +0200
+
+libfreenect2 (0.1-76) unstable; urgency=low
+
+  * fixed bug in CommandTransaction
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 10:09:10 +0200
+
+libfreenect2 (0.1-75) unstable; urgency=low
+
+  * renamed command, which gets the serial number string
+
+ -- christiankerl <christian.kerl@in.tum.de>  Mon, 05 May 2014 20:31:54 +0200
+
+libfreenect2 (0.1-74) unstable; urgency=low
+
+  * refactored command stuff
+
+ -- christiankerl <christian.kerl@in.tum.de>  Mon, 05 May 2014 20:22:51 +0200
+
+libfreenect2 (0.1-73) unstable; urgency=low
+
+  * started to refactor control protocol/command functions
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 05 May 2014 18:09:13 +0200
+
+libfreenect2 (0.1-72) unstable; urgency=low
+
+  * implemented proper opengl/glew multithreaded context handling
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 26 Jun 2014 14:03:33 +0200
+
+libfreenect2 (0.1-71) unstable; urgency=low
+
+  * fixed small bug in first shader stage
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 12:37:35 +0200
+
+libfreenect2 (0.1-70) unstable; urgency=low
+
+  * fixed MaxEdgeTest data type
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 12:14:19 +0200
+
+libfreenect2 (0.1-69) unstable; urgency=low
+
+  * changed first shader stage such that output norm is equal to the later,
+    in-place norm computation in cpu version
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 12:08:26 +0200
+
+libfreenect2 (0.1-68) unstable; urgency=low
+
+  * extended CpuDepthPacketProcessor such that it can be used in the OpenGLDepthPacketProcessor
+    test; fixed some bugs in OpenGLDepthPacketProcessor; there are still some
+    minor differences between cpu and opengl version
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 11:34:41 +0200
+
+libfreenect2 (0.1-67) unstable; urgency=low
+
+  * removed shader folder parameter from OpenGLDepthPacketProcessor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 10:11:00 +0200
+
+libfreenect2 (0.1-66) unstable; urgency=low
+
+  * CpuDepthPacketProcessor now uses embedded resources
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 10:06:14 +0200
+
+libfreenect2 (0.1-65) unstable; urgency=low
+
+  * added conversion from min/max depth in meters to millimeters when setting
+    configuration of DepthPacketProcessor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 18 Jun 2014 09:33:04 +0200
+
+libfreenect2 (0.1-64) unstable; urgency=low
+
+  * moved common DepthPacketProcessor parameters to struct; replaced hard
+    coded parameter values in shaders with uniform structure; not yet
+    tested;
+
+ -- christiankerl <christian.kerl@in.tum.de>  Tue, 17 Jun 2014 23:53:03 +0200
+
+libfreenect2 (0.1-63) unstable; urgency=low
+
+  * explicitly link in pthread on Linux/MacOSX
+
+ -- Florian Echtler <floe@butterbrot.org>  Wed, 11 Jun 2014 22:38:23 +0200
+
+libfreenect2 (0.1-62) unstable; urgency=low
+
+  * removed several functions, which complicate current implementation; added
+    functions to support ir intensity frames
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 04 May 2014 17:55:25 +0200
+
+libfreenect2 (0.1-61) unstable; urgency=low
+
+  * initial draft for libfreenect2 api based on libfreenect api
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 17 Mar 2014 14:21:14 +0100
+
+libfreenect2 (0.1-60) unstable; urgency=low
+
+  * embedded resource generation command in cmake now depends on the input
+    files, so it gets recompiled once the input files change
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 11 Jun 2014 15:53:22 +0200
+
+libfreenect2 (0.1-59) unstable; urgency=low
+
+  * moved shader layout qualifiers to the correct position
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 11 Jun 2014 15:52:04 +0200
+
+libfreenect2 (0.1-58) unstable; urgency=low
+
+  * binary resource, like coefficient tables and shaders are now embedded
+    into the Protonect binary
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 11 Jun 2014 11:29:34 +0200
+
+libfreenect2 (0.1-57) unstable; urgency=low
+
+  * OpenGLDepthPacketProcessor now uses its configuration
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 05 Jun 2014 10:42:47 +0200
+
+libfreenect2 (0.1-56) unstable; urgency=low
+
+  * removed opencv dependency from OpenGLDepthPacketProcessor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 14:54:38 +0200
+
+libfreenect2 (0.1-55) unstable; urgency=low
+
+  * shortened image format definitions
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 13:39:24 +0200
+
+libfreenect2 (0.1-54) unstable; urgency=low
+
+  * implemented gpu depth processing using opengl shaders
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 11:25:47 +0200
+
+libfreenect2 (0.1-53) unstable; urgency=low
+
+  * increased opengl version to 3.3
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 11 Feb 2014 18:34:19 +0100
+
+libfreenect2 (0.1-52) unstable; urgency=low
+
+  * added glfw and glew as dependencies; implemented basic opengl window
+    display;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 11 Feb 2014 18:25:53 +0100
+
+libfreenect2 (0.1-51) unstable; urgency=low
+
+  * added options to enable/disable the filters to DephPacketProcessor::Config
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 17:01:20 +0200
+
+libfreenect2 (0.1-50) unstable; urgency=low
+
+  * added configuration to DepthPacketProcessor, right now just allows to
+    set min and max depth
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 15:10:23 +0200
+
+libfreenect2 (0.1-49) unstable; urgency=low
+
+  * fixed small bug
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 23 May 2014 13:22:35 +0200
+
+libfreenect2 (0.1-48) unstable; urgency=low
+
+  * implemented second filter stage in depth packet processor
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Wed, 14 May 2014 17:24:04 +0200
+
+libfreenect2 (0.1-47) unstable; urgency=low
+
+  * Merge pull request #14 from christiankerl/remove_boost_threading
+  * Removed boost thread dependency
+
+ -- Christian Kerl <christian-kerl@web.de>  Fri, 09 May 2014 10:57:51 +0200
+
+libfreenect2 (0.1-46) unstable; urgency=low
+
+  * fixed segfault in DepthPacketStreamParser; fixes OpenKinect/libfreenect2#15
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 06 May 2014 17:05:23 +0200
+
+libfreenect2 (0.1-45) unstable; urgency=low
+
+  * removed boost threads dependency from depends/README.depends.txt
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 04 May 2014 22:11:53 +0200
+
+libfreenect2 (0.1-44) unstable; urgency=low
+
+  * replaced boost threading dependency with stdlib or tinythread implementation
+
+ -- christiankerl <christian.kerl@in.tum.de>  Sun, 04 May 2014 22:10:20 +0200
+
+libfreenect2 (0.1-43) unstable; urgency=low
+
+  * use simple n*6 float arrays instead of multiple cv::Mat instances
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 11 Feb 2014 19:19:21 +0100
+
+libfreenect2 (0.1-42) unstable; urgency=low
+
+  * Merge branch 'ir_iso_transfer' into trig_tables
+  * Conflicts:
+  	examples/protonect/src/cpu_depth_packet_processor.cpp
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 11 Feb 2014 19:10:12 +0100
+
+libfreenect2 (0.1-41) unstable; urgency=low
+
+  * added FrameListener to synchronize rgb/ir/depth images and display them
+    in the main thread
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 11 Feb 2014 17:01:42 +0100
+
+libfreenect2 (0.1-40) unstable; urgency=low
+
+  * replace per-pixel trig calculations with table lookups
+
+ -- Florian Echtler <floe@butterbrot.org>  Mon, 10 Feb 2014 20:41:43 +0100
+
+libfreenect2 (0.1-39) unstable; urgency=low
+
+  * updated depends README to include change of MAX_ISO_BUFFER_LENGTH and
+    min kernel version
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 10 Feb 2014 16:27:01 +0100
+
+libfreenect2 (0.1-38) unstable; urgency=low
+
+  * added patch to increase libusbx MAX_ISO_BUFFER_LENGTH
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 10 Feb 2014 16:22:53 +0100
+
+libfreenect2 (0.1-37) unstable; urgency=low
+
+  * removed boost signal dependency
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 10 Feb 2014 16:00:26 +0100
+
+libfreenect2 (0.1-36) unstable; urgency=low
+
+  * added shell script to download/build correct libusbx version on ubuntu;
+    updated dependecy list
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 10 Feb 2014 15:32:51 +0100
+
+libfreenect2 (0.1-35) unstable; urgency=low
+
+  * added comments with interpretation of two unknown data blocks
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 07 Feb 2014 16:44:57 +0100
+
+libfreenect2 (0.1-34) unstable; urgency=low
+
+  * add guesstimated structure for second block of camera params
+
+ -- Florian Echtler <floe@butterbrot.org>  Wed, 05 Feb 2014 11:15:22 +0100
+
+libfreenect2 (0.1-33) unstable; urgency=low
+
+  * move struct definition for depth cam intrinsics to proper header
+    file
+
+ -- Florian Echtler <floe@butterbrot.org>  Wed, 05 Feb 2014 11:00:38 +0100
+
+libfreenect2 (0.1-32) unstable; urgency=low
+
+  * parse depth camera parameters (partly still guesses)
+
+ -- Florian Echtler <floe@butterbrot.org>  Mon, 03 Feb 2014 15:44:05 +0100
+
+libfreenect2 (0.1-31) unstable; urgency=low
+
+  * remove unnecessary hex prefix
+
+ -- Florian Echtler <floe@butterbrot.org>  Sat, 01 Feb 2014 18:51:34 +0100
+
+libfreenect2 (0.1-30) unstable; urgency=low
+
+  * dump hex data from unknown commands
+
+ -- Florian Echtler <floe@butterbrot.org>  Sat, 01 Feb 2014 18:43:58 +0100
+
+libfreenect2 (0.1-29) unstable; urgency=low
+
+  * move p0 table definitions to header dir
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 04 Feb 2014 17:00:07 +0100
+
+libfreenect2 (0.1-28) unstable; urgency=low
+
+  * Merge branch 'ir_iso_transfer' into p0table
+  * Conflicts:
+  	examples/protonect/src/cpu_depth_packet_processor.cpp
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 04 Feb 2014 16:51:48 +0100
+
+libfreenect2 (0.1-27) unstable; urgency=low
+
+  * implemented bilateral filter on differential a/b images; really
+    slow
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Tue, 04 Feb 2014 09:49:43 +0100
+
+libfreenect2 (0.1-26) unstable; urgency=low
+
+  * simplified rgb/depth packet processor api; async processing is now implemented
+    in a templated decorator class
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 03 Feb 2014 12:08:20 +0100
+
+libfreenect2 (0.1-25) unstable; urgency=low
+
+  * change p0table struct as suggested by ck
+
+ -- Florian Echtler <floe@butterbrot.org>  Sun, 02 Feb 2014 16:08:27 +0100
+
+libfreenect2 (0.1-24) unstable; urgency=low
+
+  * replace hard-coded offsets with struct references
+
+ -- Florian Echtler <floe@butterbrot.org>  Sun, 02 Feb 2014 10:11:57 +0100
+
+libfreenect2 (0.1-23) unstable; urgency=low
+
+  * add p0tables definition header
+
+ -- Florian Echtler <floe@butterbrot.org>  Sat, 01 Feb 2014 18:57:54 +0100
+
+libfreenect2 (0.1-22) unstable; urgency=low
+
+  * rename command wrapper functions
+
+ -- Florian Echtler <floe@butterbrot.org>  Sat, 01 Feb 2014 14:16:44 +0100
+
+libfreenect2 (0.1-21) unstable; urgency=low
+
+  * refactored the control commands
+
+ -- Florian Echtler <floe@butterbrot.org>  Sat, 01 Feb 2014 14:02:53 +0100
+
+libfreenect2 (0.1-20) unstable; urgency=low
+
+  * Merge branch 'ir_iso_transfer' into api_cleanup
+
+ -- Florian Echtler <floe@butterbrot.org>  Fri, 31 Jan 2014 23:26:41 +0100
+
+libfreenect2 (0.1-19) unstable; urgency=low
+
+  * implemented depth disambiguation
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 31 Jan 2014 15:43:08 +0100
+
+libfreenect2 (0.1-18) unstable; urgency=low
+
+  * refactor init/status commands (part #1)
+
+ -- Florian Echtler <floe@butterbrot.org>  Fri, 31 Jan 2014 14:58:37 +0100
+
+libfreenect2 (0.1-17) unstable; urgency=low
+
+  * removed old Makefile and decode utility programs
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 24 Jan 2014 17:19:30 +0100
+
+libfreenect2 (0.1-16) unstable; urgency=low
+
+  * added display of RGB images using libjpeg-turbo decoding and opencv
+    gui
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 23 Jan 2014 12:30:27 +0100
+
+libfreenect2 (0.1-15) unstable; urgency=low
+
+  * added some time profiling to depth decoding
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 23 Jan 2014 11:47:30 +0100
+
+libfreenect2 (0.1-14) unstable; urgency=low
+
+  * increased number of iso packets
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 23 Jan 2014 11:46:47 +0100
+
+libfreenect2 (0.1-13) unstable; urgency=low
+
+  * first working version of ir/depth decoding; several post processing
+    steps like depth disambiguation, bilateral filtering, edge-aware filtering,
+    implemented in the official SDK are missing; the implemented CPU decoding
+    is slow and only runs at 10Hz or less;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 23 Jan 2014 10:51:13 +0100
+
+libfreenect2 (0.1-12) unstable; urgency=low
+
+  * update to capture all iso data and write it to one large binary file;
+    decode extracts individual images from this binary file;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Thu, 19 Dec 2013 11:56:22 +0100
+
+libfreenect2 (0.1-11) unstable; urgency=low
+
+  * more depth decoding experiments
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 16 Dec 2013 17:34:10 +0100
+
+libfreenect2 (0.1-10) unstable; urgency=low
+
+  * fixed copy&paste bug
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 16 Dec 2013 10:49:47 +0100
+
+libfreenect2 (0.1-9) unstable; urgency=low
+
+  * reformated Protonect.cpp; removed opencv dependency; added little program
+    to analyze captured ir data;
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Mon, 16 Dec 2013 10:16:33 +0100
+
+libfreenect2 (0.1-8) unstable; urgency=low
+
+  * disabled bulk transfer; use correct packet size constant
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 13 Dec 2013 10:02:11 +0100
+
+libfreenect2 (0.1-7) unstable; urgency=low
+
+  * implemented simple iso packet capture
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 13 Dec 2013 09:50:17 +0100
+
+libfreenect2 (0.1-6) unstable; urgency=low
+
+  * implemented proof of concept for rgb transfer
+
+ -- Christian Kerl <christian.kerl@in.tum.de>  Fri, 13 Dec 2013 08:54:18 +0100
+
+libfreenect2 (0.1-5) unstable; urgency=low
+
+  * Reduced chattiness and increased iso loop count
+
+ -- Joshua Blake <joshblake@gmail.com>  Mon, 09 Dec 2013 22:48:24 +0100
+
+libfreenect2 (0.1-4) unstable; urgency=low
+
+  * don't overwrite buffer size on return
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 03 Dec 2013 15:11:49 +0100
+
+libfreenect2 (0.1-3) unstable; urgency=low
+
+  * fix standard includes
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 03 Dec 2013 15:11:32 +0100
+
+libfreenect2 (0.1-2) unstable; urgency=low
+
+  * add Makefile
+
+ -- Florian Echtler <floe@butterbrot.org>  Tue, 03 Dec 2013 15:10:54 +0100
+
+libfreenect2 (0.1-1) unstable; urgency=low
+
+  * Initial commit of prototype driver.
+  * Signed-off-by: Joshua Blake <joshblake@gmail.com>
+
+ -- Joshua Blake <joshblake@gmail.com>  Mon, 02 Dec 2013 08:59:03 +0100
