@@ -49,7 +49,7 @@ remake_distribute_deb(
   SECTION libs
   UPLOAD ppa:kralf/asl
   DEPENDS "libusb-1.0-0-dev (>= 2:1.0.19-2~)" opencl-headers libglfw3-dev
-    "libglewmx-dev (>= 1.11.0)" libopencv-dev libjpeg-turbo8-dev
+    "libglewmx-dev (>= 1.11.0)" libopencv-dev libturbojpeg libjpeg-turbo8-dev
     libboost-program-options-dev remake pkg-config doxygen
   PASS CMAKE_BUILD_TYPE LIBFREENECT2_GIT_REVISION
 )

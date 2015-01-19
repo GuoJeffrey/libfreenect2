@@ -1,3 +1,9 @@
+libfreenect2 (0.1-187) unstable; urgency=low
+
+  * Added missing build dependency libturbojpeg
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 19 Jan 2015 11:28:00 +0100
+
 libfreenect2 (0.1-186) unstable; urgency=low
 
   * Removed testing binaries and package (requires unsupplied data)
