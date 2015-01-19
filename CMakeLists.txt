@@ -28,18 +28,14 @@ remake_pack_deb(
     libglewmx1.11 libopencv-core2.4 libturbojpeg
 )
 remake_pack_deb(
-  COMPONENT examples
-  DEPENDS libfreenect2
-  DESCRIPTION "examples"
-)
-remake_pack_deb(
-  COMPONENT test
-  DEPENDS libfreenect2
-  DESCRIPTION "testing"
+  COMPONENT utils
+  DEPENDS libfreenect2 libboost-program-options[0-9.]*
+  DESCRIPTION "utilities"
 )
 remake_pack_deb(
   COMPONENT dev
-  DEPENDS libfreenect2
+  DEPENDS libfreenect2 "libusb-1.0-0-dev (>= 2:1.0.19-2~)" libglfw3-dev
+    "libglewmx-dev (>= 1.11.0)"
   DESCRIPTION "development headers"
 )
 remake_pack_deb(
@@ -53,7 +49,7 @@ remake_distribute_deb(
   SECTION libs
   UPLOAD ppa:kralf/asl
   DEPENDS "libusb-1.0-0-dev (>= 2:1.0.19-2~)" opencl-headers libglfw3-dev
-    "libglewmx-dev (>= 1.11.0)" libopencv-dev libjpeg-turbo8-dev remake
-    pkg-config doxygen
+    "libglewmx-dev (>= 1.11.0)" libopencv-dev libjpeg-turbo8-dev
+    libboost-program-options-dev remake pkg-config doxygen
   PASS CMAKE_BUILD_TYPE LIBFREENECT2_GIT_REVISION
 )

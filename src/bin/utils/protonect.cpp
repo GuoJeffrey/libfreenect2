@@ -32,9 +32,12 @@
 
 #include <opencv2/opencv.hpp>
 
+#include <boost/program_options.hpp>
+
 #include <libfreenect2/libfreenect2.hpp>
 #include <libfreenect2/frame_listener_impl.h>
 #include <libfreenect2/threading.h>
+#include <libfreenect2/packet_pipeline.h>
 
 bool protonect_shutdown = false;
 
@@ -45,21 +48,47 @@ void sigint_handler(int s)
 
 int main(int argc, char *argv[])
 {
-  std::string program_path(argv[0]);
-  size_t executable_name_idx = program_path.rfind("freenect2-protonect");
+  boost::program_options::options_description description(
+    "Supported options");
+  boost::program_options::variables_map variables;
 
-  std::string binpath = "/";
+  description.add_options()
+    ("pipeline,p",
+      boost::program_options::value<std::string>()->default_value("cpu"),
+      "packet processing pipeline [cpu|gl|cl]")
+    ("help,h", "produce help message");
+    
+  boost::program_options::store(
+    boost::program_options::command_line_parser(argc, argv).options(
+      description).run(), variables);
 
-  if(executable_name_idx != std::string::npos)
-  {
-    binpath = program_path.substr(0, executable_name_idx);
+  if (variables.count("help")) {
+    std::cout <<
+      "Usage: freenect2-protonect [options]\n"
+      "\n"
+      "Connect to the default Kinect Version 2 (Xbox One) device and display\n"
+      "RGB, IR, and depth frames.\n" 
+      "\n" <<
+      description;
+    return 0;
   }
-
+  
   glfwInit();
 
   libfreenect2::Freenect2 freenect2;
-  libfreenect2::Freenect2Device *dev = freenect2.openDefaultDevice();
+  libfreenect2::Freenect2Device *dev = 0;
 
+  if (variables.count("pipeline")) {
+    std::string pipeline = variables["pipeline"].as<std::string>();
+    
+    if (pipeline == "cpu")
+      dev = freenect2.openDefaultDevice(new libfreenect2::CpuPacketPipeline());
+    else if (pipeline == "gl")
+      dev = freenect2.openDefaultDevice(new libfreenect2::OpenGLPacketPipeline());
+    else if (pipeline == "cl")
+      dev = freenect2.openDefaultDevice(new libfreenect2::OpenCLPacketPipeline());
+  }
+      
   if(dev == 0)
   {
     std::cout << "no device connected or failure opening the default one!" << std::endl;

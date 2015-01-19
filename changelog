@@ -1,3 +1,14 @@
+libfreenect2 (0.1-186) unstable; urgency=low
+
+  * Removed testing binaries and package (requires unsupplied data)
+  * Renamed examples component to utils
+  * Added header install rules
+  * Added feeature to switch packet pipelines from the command line
+    in protonect utility
+  * Added build and install instructions to README
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 19 Jan 2015 10:03:00 +0100
+
 libfreenect2 (0.1-185) unstable; urgency=low
 
   * First working version with build system port

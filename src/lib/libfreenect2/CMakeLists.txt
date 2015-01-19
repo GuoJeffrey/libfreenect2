@@ -26,5 +26,6 @@ remake_add_library(
   LINK ${LIBUSB_1_0_LIBRARIES} ${OPENCL_LIBRARIES} ${GLFW3_LIBRARIES}
     ${GLEWMX_LIBRARIES} ${OPENCV_LIBRARIES} ${LIBTURBOJPEG_SO_0_LIBRARY}
 )
+remake_add_headers(*.h *.hpp RECURSE)
 
 remake_pkg_config_generate()
