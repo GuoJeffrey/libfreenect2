@@ -1,3 +1,9 @@
+libfreenect2 (0.1-190) unstable; urgency=low
+
+  * Added udev rules (and package)
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 19 Jan 2015 13:45:00 +0100
+
 libfreenect2 (0.1-189) unstable; urgency=low
 
   * Added -msse2 compiler flag to fix build failure for i386 architectures

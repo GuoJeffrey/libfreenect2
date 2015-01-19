@@ -1,0 +1,7 @@
+# Kinect version 2 auto-configuration rules for udev.
+# See udev(7) for syntax.
+
+# Kinect2 device group ownership
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", GROUP="plugdev"

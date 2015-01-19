@@ -19,6 +19,14 @@ remake_project(
   EXTRA_CXX_FLAGS "-msse2 -std=c++0x"
 )
 
+remake_component(
+  udev
+  CONFIGURATION_DESTINATION /etc/udev
+)
+remake_add_directories(
+  rules
+  COMPONENT udev
+)
 remake_doc(
   html
 )
@@ -37,6 +45,12 @@ remake_pack_deb(
   DEPENDS libfreenect2 "libusb-1.0-0-dev (>= 2:1.0.19-2~)" libglfw3-dev
     "libglewmx-dev (>= 1.11.0)"
   DESCRIPTION "development headers"
+)
+remake_pack_deb(
+  COMPONENT udev
+  DESCRIPTION "udev rules"
+  DEPENDS udev
+  EXTRA debian/rules/*
 )
 remake_pack_deb(
   ARCH all
