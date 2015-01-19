@@ -16,7 +16,7 @@ remake_project(
   README README.md
   INSTALL /usr
   PREFIX freenect2-
-  EXTRA_CXX_FLAGS -std=c++0x
+  EXTRA_CXX_FLAGS "-msse2 -std=c++0x"
 )
 
 remake_doc(
