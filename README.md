@@ -120,7 +120,7 @@ these instructions:
 * Install all build depdencies through 
 
   ```
-  sudo apt-get install libusb-1.0-0-dev opencl-headers libglfw3-dev libglewmx-dev libopencv-dev libturbojpeg libjpeg-turbo8-dev libboost-program-options-dev
+  sudo apt-get install libusb-1.0-0-dev ocl-icd-libopencl1 opencl-headers libglfw3-dev libglewmx-dev libopencv-dev libturbojpeg libjpeg-turbo8-dev libboost-program-options-dev
   ```
 
 ### Building with CMake
