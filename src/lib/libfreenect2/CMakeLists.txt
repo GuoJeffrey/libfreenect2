@@ -28,4 +28,4 @@ remake_add_library(
 )
 remake_add_headers(*.h *.hpp RECURSE)
 
-remake_pkg_config_generate()
+remake_pkg_config_generate(REQUIRES glfw3)
