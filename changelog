@@ -1,3 +1,9 @@
+libfreenect2 (0.1-193) unstable; urgency=low
+
+  * Updated README.md
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 28 Jan 2015 08:55:00 +0100
+
 libfreenect2 (0.1-192) unstable; urgency=low
 
   * Updated README.md
