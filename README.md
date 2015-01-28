@@ -94,7 +94,7 @@ open-source macro extension called ReMake.
 If you already have installed ReMake on your build system, you may
 skip this step. Otherwise, before attempting to build this project the
 traditional CMake way, you must install ReMake following
-[these instructions](https://github.com/kralf/remake)
+[these instructions](https://github.com/kralf/remake).
 
 #### Installing build dependencies
 
