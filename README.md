@@ -9,7 +9,7 @@ Driver library for the Kinect Version 2 (Xbox One) device.
 **Maintainer(s):** Joshua Blake <joshblake@gmail.com>,
   Ralf Kaestner <ralf.kaestner@gmail.com>
 
-**Licsense:** GNU Lesser General Public License (LGPL)
+**License:** GNU Lesser General Public License (LGPL)
 
 **Operating system(s):** Debian-based Linux
 
