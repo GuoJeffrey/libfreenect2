@@ -38,6 +38,21 @@ Watch the OpenKinect wiki at www.openkinect.org and the mailing list at
 https://groups.google.com/forum/#!forum/openkinect for the latest developments
 and more information about the K4W2 USB protocol.
 
+### Publications
+
+If you use this work in an academic context, please cite the following publication:
+
+P. Fankhauser, M. Bloesch, D. Rodriguez, R. Kaestner, M. Hutter, and R. Siegwart,
+**"Kinect v2 for Mobile Robot Navigation: Evaluation and Modeling"**,
+in IEEE International Conference on Advanced Robotics (ICAR), 2015. (submitted) ([PDF Draft](http://designfankhauser.ch/files/fankhauser_2014_kinect_v2.pdf))
+
+    @inproceedings{Fankhauser2015KinectV2ForMobileRobotNavigation,
+      author = {Fankhauser, Péter and Bloesch, Michael and Rodriguez, Diego and and Kaestner, Ralf and Hutter, Marco and Siegwart, Roland},
+      title = {Kinect v2 for Mobile Robot Navigation: Evaluation and Modeling},
+      booktitle = {IEEE International Conference on Advanced Robotics (ICAR) (submitted)},
+      year = {2015}
+    }
+
 ## Installation
 
 This project has been forked from the original Kinect v2 device driver
