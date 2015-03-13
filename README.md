@@ -187,6 +187,11 @@ project the CMake way. Assuming that you have cloned the project sources into
   make install
   ```
 
+## Common pitfalls
+
+* Kinect v2 not connected to a USB-3 port,
+* Insufficient user rights on raw USB device (add user to plugdev group).
+
 ## Required notification
 
 The K4W2 hardware is currently pre-release. Per the K4W2 developer program
